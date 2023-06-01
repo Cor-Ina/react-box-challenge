@@ -3,17 +3,17 @@ import React from "react"
 
 export default function Box(props) {
 
-    const [on, setOn] = React.useState(props.on)
-
     const styles = {
-        backgroundColor: on ? "#222" : "transparent"
-    }
-
-    function toggle() {
-        setOn(prevOn => !prevOn)
+        backgroundColor: props.on ? "#222" : "transparent"
     }
 
     return (
-        <div className="box" style = {styles} onClick={toggle}></div>
+        <div 
+            className="box" 
+            style = {styles} 
+            // give toggle the ability to know which box was clicked so the state array can be updated 
+            onClick={() => props.handleClick(props.id)}>
+
+        </div>
     )
 }
