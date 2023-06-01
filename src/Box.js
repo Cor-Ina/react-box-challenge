@@ -11,9 +11,7 @@ export default function Box(props) {
         <div 
             className="box" 
             style = {styles} 
-            // give toggle the ability to know which box was clicked so the state array can be updated 
-            onClick={() => props.handleClick(props.id)}>
-
+            onClick={props.handleClick}>
         </div>
     )
 }

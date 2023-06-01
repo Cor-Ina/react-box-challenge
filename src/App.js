@@ -46,9 +46,8 @@ export default function App(props) {
     <Box 
       on = {square.on} 
       key = {square.id} 
-      id = {square.id}
-      handleClick = {toggle}/>)
-  )
+      handleClick = {() => toggle(square.id)}/>
+  ))
 
   return (
     <main>
